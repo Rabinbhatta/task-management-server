@@ -10,6 +10,7 @@ import { v2 as cloudinary } from "cloudinary";
 import { createServer } from "http";
 import authRoute from "./router/auth.js";
 import taskRoute from "./router/tasks.js";
+import projectRoute from "./router/project.js";
 // import authRoute from "./router/auth.js"
 
 const app = express();
@@ -35,6 +36,7 @@ app.use(
 
 app.use("/auth", authRoute);
 app.use("/tasks", taskRoute);
+app.use("/projects", projectRoute);
 
 // cloudinary.config({
 //     cloud_name: process.env.cloudinary_cloud_name,
